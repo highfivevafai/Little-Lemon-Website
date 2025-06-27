@@ -1,0 +1,253 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.nav-brand {
+  height: auto;
+  width: 250px;
+  margin: 0px auto 3rem;
+}
+
+.header-nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+}
+
+.nav-link {
+  padding: .75rem 2rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid #aba59b;
+  border-radius: 8px;
+  display: block;
+}
+
+.btn {
+  padding: .75rem 2rem;
+  text-decoration: none;
+  background-color: rgb(31, 52, 43);
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid #aba59b;
+  border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: #2b4239;
+}
+
+main {
+  grid-area: main;
+  min-height: 100%;
+  width: 100%;
+}
+.flex-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+article.card {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px dashed rgb(204, 197, 184);
+}
+
+article {
+  flex: 1;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  border-right: 1px solid rgb(204, 197, 184);
+  border-left: 1px solid rgb(204, 197, 184);
+}
+
+.content {
+  padding: 1.875rem;
+  display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content ul {
+    list-style: disc;
+    padding-inline-start: 30px;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #000;
+}
+.footer-logo {
+  width: 50px;
+}
+
+footer .container {
+  border-color: rgb(64, 61, 58);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+body {
+  background-color: rgb(244, 238, 226);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  height: min-content;
+  margin: 0;
+  justify-items: center;
+  align-items: start;
+  font-size: 1rem;
+}
+header,
+main,
+footer {
+  width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+p {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .flex-articles {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .header-nav-list {
+    flex-direction: row;
+    gap: .75rem;
+  }
+}
